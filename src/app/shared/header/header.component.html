@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #26272b;">
+    <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <div>
+            <ul class="navbar-nav ms-md-auto gap-2">
+                <p>Welcome {{welcome_user.firstname}} !</p>
+                <button class="btn-style" (click)="navigateLogout()">
+                    <mat-icon class="logout">exit_to_app</mat-icon>Logout
+                </button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+
+<button (click)="onUpload()">Upload Image</button> -->

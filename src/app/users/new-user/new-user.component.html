@@ -1,0 +1,123 @@
+<app-header></app-header>
+<div class="add_user_div">
+    <mat-card class="user_card">
+        <mat-card-content>
+            <h2 class="text-center">Add user details</h2>
+            <form class="text-center box" [formGroup]="userDataForm" (ngSubmit)="onSubmit()">
+                <div class="col-md-12 d-flex div_padding">
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" required>
+                        <mat-icon matPrefix>person</mat-icon>
+                        <mat-error *ngIf="form['name'].touched && form['name'].errors">
+                            <span *ngIf="form['name']['errors']['required']">Name is required.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <div style="margin-left: 15px;">
+                        <mat-form-field class="form-field" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <mat-icon matPrefix>person</mat-icon>
+                            <input matInput formControlName="username" required>
+                            <mat-error *ngIf="form['username'].touched && form['username'].errors">
+                                <span *ngIf="form['username']['errors']['required']">Username is required.</span>
+                                <span *ngIf="form['username']['errors']['minlength']">Minimum 6 character
+                                    required.</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12 d-flex div_padding" style="margin-left: 15px;">
+                        <mat-form-field class="form-field email_input_width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <mat-icon matPrefix>email</mat-icon>
+                            <input matInput formControlName="email" required>
+                            <mat-error *ngIf="form['email'].touched && form['email'].errors">
+                                <span *ngIf="form['email']['errors']['required']">Email is required.</span>
+                                <span *ngIf="form['email']['errors']['pattern']">Enter valid email.</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div formGroupName="address">
+                    <div class="col-md-12 d-flex div_padding">
+                        <mat-form-field class="form-field" appearance="outline">
+                            <mat-label>Street</mat-label>
+                            <mat-icon matPrefix>place</mat-icon>
+                            <input matInput formControlName="street">
+                            <mat-error
+                                *ngIf="userDataForm.get('address.street')?.touched && userDataForm.get('address.street')?.invalid">
+                                <span *ngIf="userDataForm.get('address.street')?.invalid">Street is required.</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <div style="margin-left: 15px;">
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Suite</mat-label>
+                                <mat-icon matPrefix>place</mat-icon>
+                                <input matInput formControlName="suite">
+                                <mat-error
+                                    *ngIf="userDataForm.get('address.suite')?.touched && userDataForm.get('address.suite')?.invalid">
+                                    <span *ngIf="userDataForm.get('address.suite')?.invalid">Suite is required.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div style="margin-left: 15px;">
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Select city</mat-label>
+                                <mat-icon matPrefix>location_city</mat-icon>
+                                <mat-select formControlName="city">
+                                    <mat-option *ngFor="let cn of cityname" [value]="cn">{{cn}}</mat-option>
+                                </mat-select>
+                                <mat-error
+                                    *ngIf="userDataForm.get('address.city')?.touched && userDataForm.get('address.city')?.invalid">
+                                    <span *ngIf="userDataForm.get('address.city')?.invalid">City is required.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div style="margin-left: 15px;">
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Zip code</mat-label>
+                                <mat-icon matPrefix>place</mat-icon>
+                                <input matInput formControlName="zipcode" (keypress)="keyNumber($event)">
+                                <mat-error
+                                    *ngIf="userDataForm.get('address.zipcode')?.touched && userDataForm.get('address.zipcode')?.invalid">
+                                    <span *ngIf="userDataForm.get('address.zipcode')?.invalid">Only valid Zip code is
+                                        required.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 d-flex div_padding">
+                    <mat-form-field class="form-field input_width" appearance="outline">
+                        <mat-label>Phone</mat-label>
+                        <mat-icon matPrefix>phone</mat-icon>
+                        <input matInput formControlName="phone" (keypress)="keyNumber($event)">
+                        <mat-error *ngIf="form['phone'].touched && form['phone'].errors">
+                            <span *ngIf="form['phone']['errors']['required']">Phone number is required</span>
+                            <span *ngIf="form['phone']['errors']['pattern']">Only 10 digits are allowed.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field input_width"style="margin-left: 15px;" appearance="outline">
+                        <mat-label>Website</mat-label>
+                        <mat-icon matPrefix>website</mat-icon>
+                        <input matInput formControlName="website">
+                        <mat-error *ngIf="form['website'].touched && form['website'].errors">
+                            <span *ngIf="form['website']['errors']['required']">Website is required.</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field input_width"style="margin-left: 15px;" appearance="outline">
+                        <mat-label>Company name</mat-label>
+                        <mat-icon matPrefix>location_city</mat-icon>
+                        <input matInput formControlName="companyName">
+                        <mat-error *ngIf="form['companyName'].touched && form['companyName'].errors">
+                            <span *ngIf="form['companyName']['errors']['required']">Company name is required.</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <button *ngIf="!editButton" mat-raised-button color="primary" type="submit">Submit</button>
+                <button *ngIf="editButton" mat-raised-button color="primary" type="submit">Save</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+<app-footer></app-footer>

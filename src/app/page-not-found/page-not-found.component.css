@@ -1,0 +1,47 @@
+.site_logo {
+    padding: 25px 0 0 25px;
+}
+
+.site_logo img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.not_found {
+    height: 100%;
+}
+
+.not_found .error_text {
+    padding: 0 0 25px;
+    order: -1;
+    margin-top: 200px;
+}
+
+.not_found span {
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: bold;
+    color: #3683BC;
+    display: block;
+}
+
+.not_found p {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.not_found button {
+    border: none;
+    background-color: #3683BC;
+    margin: 0 auto;
+    color: #fff;
+    padding: 8px;
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}

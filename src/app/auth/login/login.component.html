@@ -1,0 +1,43 @@
+<div class="sign_in_div">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 m-auto width_500">
+                <img src="../../../assets/img/logo2.png" alt="">
+                <div class="card">
+                    <form class="text-center box" [formGroup]="loginUserForm" (ngSubmit)="onSubmit()">
+                        <div class="form_heading">
+                            <mat-icon class="icon_css">account_circle</mat-icon>
+                            <h1>Sign in to ScriptUs</h1>
+                            <p><span class="new_here">New Here? </span><a class="register text-muted"
+                                    routerLink="/auth/signup">Sign Up</a></p>
+                        </div>
+                        <mat-form-field class="form-field input_width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email" required>
+                            <mat-icon matPrefix>email</mat-icon>
+                            <mat-error
+                                *ngIf="form['email'].touched && form['email'].errors">
+                                <span *ngIf="form['email']['errors']['required']">Email is required.</span>
+                                <span *ngIf="form['email']['errors']['pattern']">Enter valid
+                                    email.</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="form-field input_width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput formControlName="password">
+                            <mat-icon matPrefix>lock</mat-icon>
+                            <mat-error
+                                *ngIf="form['password'].touched && form['password'].errors">
+                                <span *ngIf="form['password']['errors']['required']">Password is required.</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <div class="forgot text-muted" (click)="forgotPassword()">Forgot password?</div>
+                        <button mat-raised-button color="primary" type="submit" class="mt-4 button_width">Sign in</button>
+                        <span class="or_css">OR</span>
+                        <mat-icon class="google_btn" style="width: 50px; height:30px" svgIcon="logo"></mat-icon> Login With Google
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+table,
+th,
+td {
+    border: 1px solid #e0e0e0;
+    font-family: sans-serif;
+}
+
+tbody td {
+    padding: 12px;
+}
+
+tbody th {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+tbody td {
+    font-size: 14px;
+}
+
+tbody td:nth-child(2),
+td:nth-child(5) {
+    font-style: italic;
+}
+
+tbody td:nth-child(2),
+td:nth-child(3),
+td:nth-child(5),
+td:nth-child(6) {
+    text-align: right;
+}
+
+td:nth-child(3) {
+    border-right: 2px solid black;
+}
+
+td:nth-child(3),
+td:nth-child(6) {
+    font-weight: 700;
+}
+
+tr:last-child {
+    border: 2px solid black;
+    border-right: none;
+    border-left: none;
+    font-weight: 700;
+}
+
+thead {
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.total_value {
+    border-bottom: 2px solid black;
+}

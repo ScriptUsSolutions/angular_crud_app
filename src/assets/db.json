@@ -1,0 +1,295 @@
+{
+  "users": [
+    {
+      "name": "Bhavy Soliya",
+      "username": "Bhavy@77",
+      "email": "bhavy77@gmail.com",
+      "address": {
+        "street": "77",
+        "suite": "177",
+        "city": "Mumbai",
+        "zipcode": "395001"
+      },
+      "phone": "7845129631",
+      "website": "bhavysoliya.com",
+      "companyName": "Bhavy Private Limited",
+      "id": 18
+    },
+    {
+      "name": "Yash Bhungaliya",
+      "username": "Yash@17",
+      "email": "yashg17@gmail.com",
+      "address": {
+        "street": "17",
+        "suite": "121",
+        "city": "Surat",
+        "zipcode": "394101"
+      },
+      "phone": "9988991234",
+      "website": "yb.com",
+      "companyName": "YB Limited",
+      "id": 19
+    },
+    {
+      "name": "Pareshbhai Kachhadiya",
+      "username": "pk_110",
+      "email": "pk11@gmail.com",
+      "address": {
+        "street": "11",
+        "suite": "113",
+        "city": "Surat",
+        "zipcode": "395006"
+      },
+      "phone": "9912345678",
+      "website": "pk.com",
+      "companyName": "pk limited",
+      "id": 20
+    },
+    {
+      "name": "Yash Jasani",
+      "username": "yash_13",
+      "email": "yashjasni@gmail.com",
+      "address": {
+        "street": "13",
+        "suite": "111",
+        "city": "Surat",
+        "zipcode": "394001"
+      },
+      "phone": "7845129631",
+      "website": "yashjasani.com",
+      "companyName": "YJ",
+      "id": 21
+    },
+    {
+      "name": "Romit Bhalani",
+      "username": "Romit@123",
+      "email": "romit123@gmail.com",
+      "address": {
+        "street": "16",
+        "suite": "123",
+        "city": "Bangalore",
+        "zipcode": "456123"
+      },
+      "phone": "7894561230",
+      "website": "romitbhalani.com",
+      "companyName": "RB Limited",
+      "id": 22
+    },
+    {
+      "name": "Jemin Bhalani",
+      "username": "Jemin@11",
+      "email": "jeminbhalani11@gmail.com",
+      "address": {
+        "street": "11",
+        "suite": "121",
+        "city": "Surat",
+        "zipcode": "394101"
+      },
+      "phone": "7845129631",
+      "website": "jeminbhalani.com",
+      "companyName": "JB Limited",
+      "id": 23
+    },
+    {
+      "name": "Karan Vaghela",
+      "username": "Karan#1",
+      "email": "karanvaghela1@gmail.com",
+      "address": {
+        "street": "112",
+        "suite": "1",
+        "city": "Bangalore",
+        "zipcode": "500101"
+      },
+      "phone": "7855126312",
+      "website": "karanV.com",
+      "companyName": "KV Technologies",
+      "id": 24
+    },
+    {
+      "name": "K B ",
+      "username": "KB_Bhal",
+      "email": "kb123@gmail.com",
+      "address": {
+        "street": "45",
+        "suite": "144",
+        "city": "Tamil Nadu",
+        "zipcode": "665001"
+      },
+      "phone": "7845129310",
+      "website": "kb.com",
+      "companyName": "K Bhal Limited",
+      "id": 25
+    },
+    {
+      "name": "K K ",
+      "username": "K_bhuva12",
+      "email": "kkbhuva12@gmail.com",
+      "address": {
+        "street": "12",
+        "suite": "111",
+        "city": "Chennai",
+        "zipcode": "456123"
+      },
+      "phone": "7894561239",
+      "website": "kkbhuva.com",
+      "companyName": "K K Text_Tiles",
+      "id": 26
+    }
+  ],
+  "signUp": [
+    {
+      "firstname": "yash",
+      "lastname": "bhungaliya",
+      "email": "yb@gmail.com",
+      "password": "Yash!@2001",
+      "confirmPassword": "Yash!@2001",
+      "id": 1
+    },
+    {
+      "firstname": "Romit",
+      "lastname": "Bhalani",
+      "email": "rb@gmail.com",
+      "password": "Rb@12345678",
+      "confirmPassword": "Rb@12345678",
+      "id": 3
+    },
+    {
+      "firstname": "Jemin",
+      "lastname": "Bhalani",
+      "email": "JB@gmail.com",
+      "password": "Jemin@1234",
+      "confirmPassword": "Jemin@1234",
+      "id": 4
+    },
+    {
+      "firstname": "Rahul",
+      "lastname": "K L 01",
+      "email": "rahulkl01@gmail.com",
+      "password": "Rahul@123",
+      "confirmPassword": "Rahul@123",
+      "id": 5
+    },
+    {
+      "firstname": "yash",
+      "lastname": "patel",
+      "email": "yp@gmail.com",
+      "password": "Yash@1702",
+      "confirmPassword": "Yash@1702",
+      "id": 6
+    },
+    {
+      "firstname": "Ravindra",
+      "lastname": "Jadeja",
+      "email": "ravidraj@gmail.com",
+      "password": "Jadeja$%123",
+      "confirmPassword": "Jadeja$%123",
+      "id": 7
+    },
+    {
+      "firstname": "Nirav",
+      "lastname": "Patel",
+      "email": "np123@gmail.com",
+      "password": "Nirav@1235",
+      "confirmPassword": "Nirav@1235",
+      "id": 8
+    },
+    {
+      "firstname": "Pareshbhai",
+      "lastname": "Kachhadiya",
+      "email": "pareshbhai07@gmail.com",
+      "password": "P_k@12345",
+      "confirmPassword": "P_k@12345",
+      "id": 9
+    },
+    {
+      "firstname": "Yash",
+      "lastname": "Bhungaliya",
+      "email": "yash123@gmail.com",
+      "password": "Yash#$%1010",
+      "confirmPassword": "Yash#$%1010",
+      "id": 10
+    },
+    {
+      "firstname": "pk_123",
+      "lastname": "kachhadiya",
+      "email": "pk123@gmail.com",
+      "password": "Pk@123456",
+      "confirmPassword": "Pk@123456",
+      "id": 11
+    },
+    {
+      "firstname": "pk_123",
+      "lastname": "kachhadiya",
+      "email": "pk123@gmail.com",
+      "password": "Pk@123456",
+      "confirmPassword": "Pk@123456",
+      "id": 12
+    },
+    {
+      "firstname": "Romit",
+      "lastname": "Bhalani",
+      "email": "romit123@gmail.com",
+      "password": "Romit$$$123",
+      "confirmPassword": "Romit$$$123",
+      "id": 13
+    }
+  ],
+  "Balance_sheet": {
+    "Liabilities": {
+      "Capital_account": {
+        "amount": 21210800,
+        "Reserves_Surplus": 210800,
+        "Capital": 21000000
+      },
+      "Loans": {
+        "amount": 100000,
+        "Unsecured_loans": 100000
+      },
+      "Current_liabilities": {
+        "amount": 38675,
+        "Duties_and_Taxes": -49622,
+        "Provisions": 88297,
+        "Sundry_creditors": ""
+      },
+      "Suspense_A/c": {
+        "amount": ""
+      },
+      "Profit_Loss_A/c": {
+        "amount": "",
+        "Opening_Balance": "",
+        "Current_Period": 113475,
+        "Less_Transferred": 113475
+      },
+      "left_total": {
+        "total_amount": 21349475
+      }
+    },
+    "Assets": {
+      "Fixed_assets": {
+        "amount": 112650,
+        "Deffered_tax_asset": 12422,
+        "Espon_printer": 16153,
+        "Jainam_software_advance": "",
+        "Jainam_software": 34670,
+        "Mobile_phone": "",
+        "Web_cam": 2282,
+        "Weigh_scale_machine": 47123
+      },
+      "Current_assets": {
+        "amount": 21236825,
+        "Sundry_debtors": 14402000,
+        "Cash_in_Hand": 303787,
+        "Bank_accounts": 649181,
+        "Interest_receivable": 330916,
+        "Advance_tax_paid": 50000,
+        "Fixed_deposits": 5190000,
+        "Income_tax_refundable": 80944,
+        "Prepaid_expenses": 150000,
+        "TDS_receivable": 79997
+      },
+      "right_total": {
+        "total_amount": 21349475
+      }
+    }
+  }
+}
