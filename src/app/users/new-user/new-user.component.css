@@ -21,7 +21,8 @@
     width: 465px;
 }
 .mat-raised-button {
-    width: 150px;
-    font-size: 18px;
+    width: 100px;
+    font-size: 14px;
     letter-spacing: 1px;
+    margin: 0px 10px;
 }

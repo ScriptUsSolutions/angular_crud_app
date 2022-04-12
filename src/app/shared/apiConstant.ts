@@ -1,5 +1,5 @@
 export const callAPIConstants = {
     UsersURL: 'users',
-    signUpURL: 'signUp',
+    AdminURL: 'admin',
     balanceSheet: 'Balance_sheet'
 }

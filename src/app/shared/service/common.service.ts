@@ -50,7 +50,7 @@ export class CommonService {
 
   showSnackBar(message: string, action: string){
     this.snackBar.open(message, action, {
-      duration: 5000,
+      duration: 3000,
       verticalPosition: "bottom",
       horizontalPosition: "right"
     });

@@ -47,7 +47,6 @@ export class ListUserComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
   public callAPIConstants = callAPIConstants;
-  // asyncData: any;
   
   constructor(
     private commonService: CommonService,
@@ -60,8 +59,6 @@ export class ListUserComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.getUsersData();
-    // this.asyncData = this.commonService.callApi(this.callAPIConstants.UsersURL, {}, 'get');
-    // console.log(this.asyncData);
   }
 
   ngAfterViewInit() {

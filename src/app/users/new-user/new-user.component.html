@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div class="add_user_div">
     <mat-card class="user_card">
         <mat-card-content>
@@ -114,10 +113,10 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <button mat-raised-button color="primary" routerLink="/users/list">Go Back</button>
                 <button *ngIf="!editButton" mat-raised-button color="primary" type="submit">Submit</button>
                 <button *ngIf="editButton" mat-raised-button color="primary" type="submit">Save</button>
             </form>
         </mat-card-content>
     </mat-card>
 </div>
-<app-footer></app-footer>

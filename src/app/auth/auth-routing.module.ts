@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../shared/auth.guard';
 import { forgotPassword } from '../shared/forgot-password-resolver';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, resolve: { signUser: forgotPassword }},
   { path: 'signup', component: SignUpComponent },
   {
-    path: 'forgot-password',
-    component: ForgotPasswordComponent,
+    path: 'reseat-password',
+    component: ResetPasswordComponent,
     resolve: { signUser: forgotPassword },
+  },
+  {
+    path: 'verify-email',
+    component: VerifyEmailComponent
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];

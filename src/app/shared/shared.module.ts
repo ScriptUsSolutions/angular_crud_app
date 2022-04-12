@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
 import { ConfirmationPopupComponent } from './confirmation-popup/confirmation-popup.component';
 import { BlockUITemplateComponent } from './loader/blockUITemplate';
 import { RouterModule } from '@angular/router';
@@ -11,7 +10,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
     ConfirmationPopupComponent,
     BlockUITemplateComponent,
     FooterComponent,
@@ -24,7 +22,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MaterialModule,
   ],
   exports: [
-    HeaderComponent,
     ConfirmationPopupComponent,
     BlockUITemplateComponent,
     FooterComponent,

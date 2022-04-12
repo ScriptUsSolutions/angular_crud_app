@@ -3,9 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { callAPIConstants } from 'src/app/shared/apiConstant';
 import { CommonService } from 'src/app/shared/service/common.service';
-import { SignupUser } from 'src/app/users/model/sign-up-user';
+import { AdminRegister} from 'src/app/users/model/admin-register';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +15,12 @@ import { SignupUser } from 'src/app/users/model/sign-up-user';
 })
 export class LoginComponent implements OnInit {
   submitted = false;
-  loginUserForm: FormGroup;
-  collectSignupData: Array<SignupUser>;
+  AdminLogin: FormGroup;
+  collectAdminData: Array<AdminRegister>;
   hide = true;
   googleLogoURL = 'https://raw.githubusercontent.com/fireflysemantics/logo/master/Google.svg';
   public callAPIConstants = callAPIConstants;
+  @BlockUI() blockUI: NgBlockUI;
 
   constructor(
     private fb: FormBuilder,
@@ -32,7 +34,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loginUserForm = this.fb.group({
+    this.blockUI.start();
+    setTimeout(() => {
+      this.blockUI.stop();
+    }, 2000);
+    this.AdminLogin = this.fb.group({
       email: [
         '',
         [
@@ -42,8 +48,8 @@ export class LoginComponent implements OnInit {
       ],
       password: ['', Validators.required],
     });
-    this.commonService.callApi(this.callAPIConstants.signUpURL, {}, 'get').then((response) => {
-        this.collectSignupData = response;
+    this.commonService.callApi(this.callAPIConstants.AdminURL, {}, 'get').then((response) => {
+        this.collectAdminData = response;
       },
       (error) => {
         this.commonService.showSnackBar(error.message, 'OK');
@@ -53,42 +59,51 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    const formValue = this.loginUserForm.value;
-    const matchEmailAndPassword = this.collectSignupData.find(
+    const formValue = this.AdminLogin.value;
+    const matchEmailAndPassword = this.collectAdminData.find(
       (item: any) =>
         formValue.email === item.email && formValue.password === item.password
     );
     if (matchEmailAndPassword) {
-      const authToken: string = this.generateToken();
-      const login_user: any = matchEmailAndPassword;
-      localStorage.setItem('authToken', authToken);
-      localStorage.setItem('login_user', JSON.stringify(login_user));
-      this.route.navigateByUrl(`/users/list`);
-      this.commonService.showSnackBar('Login successfully', 'OK');
+      this.blockUI.start();
+      setTimeout(() => {        
+        const authToken: string = this.generateToken();
+        const login_user: any = matchEmailAndPassword;
+        localStorage.setItem('authToken', authToken);
+        localStorage.setItem('login_user', JSON.stringify(login_user));
+        this.route.navigateByUrl(`/users/list`);
+        this.blockUI.stop();
+        this.commonService.showSnackBar('Login successfully', 'OK');
+      }, 2000);
     } else {
-      this.commonService.showSnackBar('email or password is incorrect', 'OK');
+      this.blockUI.start();
+      setTimeout(() => {
+        this.commonService.showSnackBar('email or password is incorrect', 'OK');
+        this.blockUI.stop( );
+      }, 2000);
     }
   }
 
   get form() {
-    return this.loginUserForm.controls;
+    return this.AdminLogin.controls;
   }
 
   forgotPassword() {
-    const formValue = this.loginUserForm.value;
-    if (!formValue.email) {
-      this.commonService.showSnackBar('Please enter email', 'OK');
-    } else {
-      const matchEmail = this.collectSignupData.find(
-        (item: any) => formValue.email === item.email
-      );
-      if (matchEmail) {
-        this.commonService.resetPasswordUser$.next(matchEmail as SignupUser);
-        this.route.navigateByUrl(`/auth/forgot-password`);
-      } else {
-        this.commonService.showSnackBar('Enter valid Email', 'OK');
-      }
-    }
+    this.route.navigateByUrl(`/auth/verify-email`);
+    // const formValue = this.AdminLogin.value;
+    // if (!formValue.email) {
+    //   this.commonService.showSnackBar('Please enter email', 'OK');
+    // } else {
+    //   const matchEmail = this.collectAdminData.find(
+    //     (item: any) => formValue.email === item.email
+    //   );
+    //   if (matchEmail) {
+    //     this.commonService.resetPasswordUser$.next(matchEmail as AdminRegister);
+    //     this.route.navigateByUrl(`/auth/forgot-password`);
+    //   } else {
+    //     this.commonService.showSnackBar('Enter valid Email', 'OK');
+    //   }
+    // }
   }
 
   generateToken() {

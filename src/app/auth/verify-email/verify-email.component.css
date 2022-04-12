@@ -1,0 +1,73 @@
+.icon_css{
+    font-size: 90px;
+    transform: translate(-150%, -50%);
+}
+
+.verify_email_div {
+    background-image: url('../../../assets/img/background.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f5f8fa;
+    padding: 32px 32px 65px 32px;
+    background-position-y: bottom;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.verify_email_div .width_500{
+    width: 500px;
+}
+
+.verify_email_div .width_500 img{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 39px;
+}
+
+.verify_email_div .card{
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+.verify_email_div .card .form_heading{
+    margin-bottom: 20px;
+}
+
+.verify_email_div .card .form_heading h1{ 
+    font-size: 1.75rem;
+    color: #181c32;
+    margin-bottom: 10px;;
+}
+
+.verify_email_div .card .verify_msg{
+    margin-top: 20px;
+}
+
+.verify_email_div .card .back_sign_in{
+    margin-top: 10px;
+}
+
+.verify_email_div .card .form_heading p{
+    margin-bottom: 0;
+}
+
+.box {
+    background: #fff;
+    padding: 48px;
+}
+
+.box .new_here{
+    color: #b5b5c3;
+}
+
+.input_width{
+    width: 300px;
+}
+
+.button_width{
+    width: 300px;
+}

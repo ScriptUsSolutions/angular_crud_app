@@ -1,0 +1,26 @@
+<div class="verify_email_div">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 m-auto width_500">
+                <img src="../../../assets/img/logo2.png" alt="">
+                <div class="card">
+                    <form class="text-center box" [formGroup]="verifyEmailForm">
+                        <div class="form_heading">
+                            <mat-icon class="icon_css">lock</mat-icon>
+                            <h1>Trouble Logging In?</h1>
+                            <p class="verify_msg">Enter your email, and we'll send you a link to get back into your account.</p>
+                            <p class="back_sign_in"><span class="new_here">Back to? </span><a class="register text-muted"
+                                routerLink="/auth/login">Sign in</a></p>
+                        </div>
+                        <mat-form-field class="form-field input_width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="emailVerify">
+                            <mat-icon matPrefix>email</mat-icon>
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" type="submit" class="button_width">Send Login Link</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
