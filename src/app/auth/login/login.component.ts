@@ -90,20 +90,6 @@ export class LoginComponent implements OnInit {
 
   forgotPassword() {
     this.route.navigateByUrl(`/auth/verify-email`);
-    // const formValue = this.AdminLogin.value;
-    // if (!formValue.email) {
-    //   this.commonService.showSnackBar('Please enter email', 'OK');
-    // } else {
-    //   const matchEmail = this.collectAdminData.find(
-    //     (item: any) => formValue.email === item.email
-    //   );
-    //   if (matchEmail) {
-    //     this.commonService.resetPasswordUser$.next(matchEmail as AdminRegister);
-    //     this.route.navigateByUrl(`/auth/forgot-password`);
-    //   } else {
-    //     this.commonService.showSnackBar('Enter valid Email', 'OK');
-    //   }
-    // }
   }
 
   generateToken() {

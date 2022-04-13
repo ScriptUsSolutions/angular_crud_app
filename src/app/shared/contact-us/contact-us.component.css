@@ -31,4 +31,12 @@ h4 {
 
 .send_msg_btn {
     float: right;
+    background-color: #1360ae;
+    color: #fff;
 }
+
+.btn_color{
+    background-color: #1360ae;
+    color: #fff;
+}
+

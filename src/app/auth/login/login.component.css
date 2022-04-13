@@ -57,7 +57,8 @@
 }
 
 .forgot, .register {
-    text-decoration: underline
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .input_width{
@@ -69,9 +70,16 @@
     width: 300px;
     margin: auto;
     display: block;
+    background-color: #1360ae;
+    color: #fff;
+    cursor: pointer;
 }
 
 .or_css{
     margin: 25px auto;
     display: block;
+}
+
+.google_btn{
+    cursor: pointer;
 }

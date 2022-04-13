@@ -11,15 +11,31 @@ export class SidenavComponent implements OnInit {
   mobileQuery: MediaQueryList;
   user_name: any;
 
-  fillerNav = Array(5)
-    .fill(0)
-    .map((_, i) => `Nav Item ${i + 1}`);
-
-
+  fillerNav = [
+    {
+      icon:'home',
+      link:"/users/list",
+      linkText:"Home"
+    },
+    {
+      icon:'person',
+      link:"/users/new",
+      linkText:"Add user"
+    },
+    {
+      icon:'phone',
+      link:"/contact-us",
+      linkText:"Contact us"
+    }
+  ];
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
+  constructor(
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher,
+    private router: Router
+  ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -29,7 +45,7 @@ export class SidenavComponent implements OnInit {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  navigateLogout(){
+  navigateLogout() {
     localStorage.removeItem('authToken');
     localStorage.removeItem('login_user');
     this.router.navigate(['/auth/login']);
@@ -37,7 +53,7 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit(): void {
     const login_data = localStorage.getItem('login_user');
-    if(login_data){
+    if (login_data) {
       this.user_name = JSON.parse(login_data);
     }
   }

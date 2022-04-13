@@ -1,11 +1,13 @@
 .list_table{
     padding: 65px 32px;
+    background-image: linear-gradient( 95.2deg, rgb(182, 209, 241) 26.8%, rgb(182, 209, 241) 64% );
 }
 .example-container {
     display: flex;
     flex-direction: column;
     min-width: 300px;
     margin: 40px auto;
+    background-color: #fff;
 }
  
 .mat-table {
@@ -15,8 +17,6 @@
 
 .btn-style{
     border: none;
-    background-color: #3f51b5;
-    color: #fff;
     padding: 8px;
     width: 100px;
     border-radius: 5px;
@@ -30,10 +30,18 @@
 }
 
 .mat-header-cell {
-    background-color: #26272b;
+    background-color: #1360ae;
     color: #fff;
 }
 
 .mat-row:nth-child(2n) {
     background-color: #e7e1e1;
+}
+
+/* .mat-sort-header-pointer-left, .mat-sort-header-pointer-right{
+    background: #fff !important;
+} */
+
+::ng-deep .mat-sort-header-arrow{
+    color: #ffff !important;
 }

@@ -1,13 +1,18 @@
 .example-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  min-height: 100vh;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-  
+
+.mat-toolbar {
+  background-color: #1360ae !important;
+  color: #fff;
+}
+
 .example-is-mobile .example-toolbar {
   position: fixed;
   z-index: 2;
@@ -16,13 +21,25 @@
 h1.example-app-name {
   margin-left: 8px;
 }
-  
-.example-sidenav-container {
-  flex: 1;
-}
-  
+
 .example-is-mobile .example-sidenav-container {
   flex: 1 0 auto;
+}
+
+.mat-sidenav {
+  width: 160px;
+}
+
+.mat-nav-list{
+  padding-top: 0;
+}
+
+.mat-nav-list a{
+  border-bottom: 1px solid black;
+}
+
+.mat-nav-list .mat-icon {
+  margin-right: 5px;
 }
 
 .logout {
@@ -30,15 +47,7 @@ h1.example-app-name {
   align-items: center;
 }
 
-.user_welcome{
+.user_welcome {
   margin-right: 25px;
   font-size: 16px;
 }
-
-.sideNavContent{
-  margin-left: 0 !important;
-}
-
-.main_div{
-  margin-left: 110px;
-}  

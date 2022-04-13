@@ -1,7 +1,13 @@
 <div class="add_user_div">
     <mat-card class="user_card">
         <mat-card-content>
-            <h2 class="text-center">Add user details</h2>
+            <div class="head_content">
+                <div class="head_btn" routerLink="/users/list">
+                    <mat-icon>keyboard_backspace</mat-icon><h4>Back</h4>
+                </div>
+                <h2 class="heading" *ngIf="!editButton">Add User Details</h2>
+                <h2 class="heading" *ngIf="editButton">Edit User Details</h2>
+            </div>
             <form class="text-center box" [formGroup]="userDataForm" (ngSubmit)="onSubmit()">
                 <div class="col-md-12 d-flex div_padding">
                     <mat-form-field class="form-field" appearance="outline">
@@ -85,7 +91,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-12 d-flex div_padding">
                     <mat-form-field class="form-field input_width" appearance="outline">
                         <mat-label>Phone</mat-label>
@@ -113,9 +118,9 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
-                <button mat-raised-button color="primary" routerLink="/users/list">Go Back</button>
-                <button *ngIf="!editButton" mat-raised-button color="primary" type="submit">Submit</button>
-                <button *ngIf="editButton" mat-raised-button color="primary" type="submit">Save</button>
+                <button *ngIf="!editButton" mat-raised-button class="btn_color" type="submit" [disabled]="!userDataForm.valid">Submit</button>
+                <button *ngIf="editButton" mat-raised-button class="btn_color" type="submit" [disabled]="!userDataForm.dirty">Save</button>
+                <button mat-raised-button class="btn_color" routerLink="/users/list">Cancel</button>
             </form>
         </mat-card-content>
     </mat-card>

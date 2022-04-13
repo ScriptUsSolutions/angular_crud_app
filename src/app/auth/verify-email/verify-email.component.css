@@ -70,4 +70,7 @@
 
 .button_width{
     width: 300px;
+    background-color: #1360ae;
+    color: #fff;
+    margin-top: 10px;
 }

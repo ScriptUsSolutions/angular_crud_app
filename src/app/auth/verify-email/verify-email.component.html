@@ -16,8 +16,13 @@
                             <mat-label>Email</mat-label>
                             <input matInput formControlName="emailVerify">
                             <mat-icon matPrefix>email</mat-icon>
+                            <mat-error
+                                *ngIf="form['emailVerify'].touched && form['emailVerify'].errors">
+                                <span *ngIf="form['emailVerify']['errors']['required']">Email cannot be blank.</span>
+                                <span *ngIf="form['emailVerify']['errors']['pattern']">Enter valid email only.</span>
+                            </mat-error>
                         </mat-form-field>
-                        <button mat-raised-button color="primary" type="submit" class="button_width">Send Login Link</button>
+                        <button mat-raised-button type="submit" [disabled]="!verifyEmailForm.valid" class="button_width" (click)="verifyEmail()">Send Login Link</button>
                     </form>
                 </div>
             </div>

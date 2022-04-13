@@ -3,11 +3,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: linear-gradient( 95.2deg, rgb(182, 209, 241) 26.8%, rgb(182, 209, 241) 64% );
 }
 
 .add_user_div .user_card{
-    /* background-color: antiquewhite; */
     box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+.add_user_div .user_card .head_content{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.add_user_div .user_card .head_content .head_btn{
+    display: flex;
+    cursor: pointer;
+}
+
+.add_user_div .user_card .head_content mat-icon{
+    margin-right: 4px;
+}
+
+.add_user_div .user_card .head_content .heading{
+    margin-left: 320px;
 }
 
 .input_width{
@@ -25,4 +46,8 @@
     font-size: 14px;
     letter-spacing: 1px;
     margin: 0px 10px;
+}
+.btn_color{
+    background-color: #1360ae;
+    color: #fff;
 }

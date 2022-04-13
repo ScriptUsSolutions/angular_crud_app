@@ -32,9 +32,11 @@
                             </mat-error>
                         </mat-form-field>
                         <div class="forgot text-muted" (click)="forgotPassword()">Forgot password?</div>
-                        <button mat-raised-button color="primary" type="submit" class="mt-4 button_width">Sign in</button>
+                        <button mat-raised-button type="submit" [disabled]="!AdminLogin.valid" class="mt-4 button_width">Sign in</button>
                         <span class="or_css">OR</span>
-                        <mat-icon class="google_btn" style="width: 50px; height:30px" svgIcon="logo"></mat-icon> Login With Google
+                        <div class="google_btn" >
+                            <mat-icon style="width: 50px; height:30px" svgIcon="logo"></mat-icon>Login With Google
+                        </div>
                     </form>
                 </div>
             </div>

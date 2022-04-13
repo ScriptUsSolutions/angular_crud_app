@@ -26,7 +26,7 @@
                       <input matInput formControlName="lastname" required>
                       <mat-error
                           *ngIf="form['lastname'].touched && form['lastname'].errors">
-                          <span *ngIf="form['lastname']['errors']['required']">lastname is required..</span>
+                          <span *ngIf="form['lastname']['errors']['required']">Lastname is required..</span>
                           <span *ngIf="form['lastname']['errors']['minlength']">Minimum 4 Character required.</span>
                       </mat-error>
                     </mat-form-field>
@@ -66,7 +66,7 @@
                             <span *ngIf="form['confirmPassword']['errors']['mustMatch']">Confirm Password must be repeated exactly.</span>
                         </mat-error>
                     </mat-form-field>
-                      <button mat-raised-button color="primary" type="submit" class="button_width">Sign up</button>
+                      <button mat-raised-button type="submit" [disabled]="!signupUserForm.valid" class="button_width">Sign up</button>
                   </form>
               </div>
           </div>

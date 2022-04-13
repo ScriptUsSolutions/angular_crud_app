@@ -75,9 +75,12 @@ export class SignUpComponent implements OnInit {
       if (matchEmail) {
         this.commonService.showSnackBar('Email already exist!', 'OK');
       } else {
+        this.blockUI.start();
         this.commonService.callApi(this.callAPIConstants.AdminURL, formValue, 'post').then((response) => {
-          console.log("response",response)
-          this.commonService.showSnackBar('Signup user successfully', 'OK');
+        setTimeout(() => {  
+            this.blockUI.stop();
+            this.commonService.showSnackBar('Admin created successfully', 'OK');
+        }, 2000);
         });
       }
     }, (error) => {

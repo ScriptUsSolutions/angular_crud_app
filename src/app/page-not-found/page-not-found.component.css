@@ -32,7 +32,7 @@
 .errorWrap a {
     display: inline-block;
     height: 32px;
-    background-color: #3f51b5;
+    background-color: #1360ae;
     font-size: 15px;
     color: #fff;
     font-weight: 700;
@@ -43,7 +43,7 @@
 }
 
 .errorWrap a:hover {
-    background-color: #3f51b5;
+    background-color: #1360ae;
     color: #fff
 }
 
@@ -251,11 +251,11 @@
 
 .cls-8.wheel,
 .cls-2 {
-    fill: #3f51b5
+    fill: #1360ae
 }
 
 .cls-3 {
-    fill: #3f51b5
+    fill: #1360ae
 }
 
 .cls-4 {

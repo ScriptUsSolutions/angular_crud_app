@@ -133,12 +133,7 @@ export class NewUserComponent implements OnInit {
     }
   }
   editUserRecord() {
-    this.blockUI.start();
-    setTimeout(() => {
-      this.blockUI.stop();
-    }, 2000);
    this.route.data.subscribe((data) => {
-      console.log(data);
       if(data && data['user']) {
         this.userId = data['user']['id'];
         this.editButton = true;

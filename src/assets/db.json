@@ -5,9 +5,9 @@
       "username": "Bhavy@77",
       "email": "bhavy77@gmail.com",
       "address": {
-        "street": "77",
-        "suite": "177",
-        "city": "Mumbai",
+        "street": "177",
+        "suite": "1771",
+        "city": "Delhi",
         "zipcode": "395001"
       },
       "phone": "7845129631",
@@ -72,7 +72,7 @@
       },
       "phone": "7894561230",
       "website": "romitbhalani.com",
-      "companyName": "RB Limited",
+      "companyName": "RB Private Limited",
       "id": 22
     },
     {
@@ -134,6 +134,21 @@
       "website": "kkbhuva.com",
       "companyName": "K K Text_Tiles",
       "id": 26
+    },
+    {
+      "name": "Jenil",
+      "username": "J_vaghani",
+      "email": "jenilvaghani@gmail.com",
+      "address": {
+        "street": "111",
+        "suite": "111",
+        "city": "Surat",
+        "zipcode": "394101"
+      },
+      "phone": "7845121011",
+      "website": "jenil.com",
+      "companyName": "J V Giants",
+      "id": 27
     }
   ],
   "admin": [
@@ -232,6 +247,38 @@
       "password": "Romit$$$123",
       "confirmPassword": "Romit$$$123",
       "id": 13
+    },
+    {
+      "firstname": "admin",
+      "lastname": "admin123",
+      "email": "admin123@gmail.com",
+      "password": "Admin@123",
+      "confirmPassword": "Admin@123",
+      "id": 14
+    },
+    {
+      "firstname": "temp",
+      "lastname": "temp12",
+      "email": "temp12@gmail.com",
+      "password": "Temp@1234",
+      "confirmPassword": "Temp@1234",
+      "id": 15
+    },
+    {
+      "firstname": "jemin",
+      "lastname": "I_am_jemin",
+      "email": "iamjemin@gmail.com",
+      "password": "Jemin@456",
+      "confirmPassword": "Jemin@456",
+      "id": 16
+    },
+    {
+      "firstname": "new ",
+      "lastname": "new1",
+      "email": "new1@gmail.com",
+      "password": "New@12345",
+      "confirmPassword": "New@12345",
+      "id": 17
     }
   ],
   "Balance_sheet": {
